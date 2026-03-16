@@ -126,6 +126,10 @@ const controlAddRecipe = async function (newRecipe) {
   // Upload the new recipe data
 };
 
+const newFeature = function () {
+  console.log('Welcome to the app!');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
@@ -135,10 +139,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newFeature();
 };
 init();
-
-const clearBookmarks = function () {
-  localStorage.clear('bookmarks');
-};
-// clearBookmarks();
